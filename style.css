@@ -1,0 +1,42 @@
+@keyframes myfirst {
+    0%   {background: red; top: 0; height: 100px; width: 100px;}
+    11%  {background: blue; top: 500px;  height: 100px; width: 100px;}
+    12%  {background: blue; top: 504px;  height: 96px; width: 106px;}
+    32%   {background: red; top: 100px; height: 100px; width: 100px;}
+    34%   {background: red; top: 95px; height: 102px; width: 98px;}
+    40%   {background: red; top: 200px; height: 100px; width: 100px;}
+    52%  {background: blue; top: 500px;  height: 100px; width: 100px;}
+    53%  {background: blue; top: 502px;  height: 98px; width: 103px;}
+    65%   {background: red; top: 350px; height: 100px; width: 100px;}
+    67%   {background: red; top: 348px; height: 100px; width: 100px;}
+    78%  {background: blue; top: 500px;  height: 100px; width: 100px;}
+    90%  {background: blue; top: 490px;  height: 98px; width: 102px;}
+    92%  {background: blue; top: 490px;  height: 98px; width: 102px;}
+    100%  {background: blue; top: 500px;  height: 100px; width: 100px;}
+}
+
+#containerForBall{
+    height: 600px;
+    width: 200px;
+    border: 2px solid red;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.ball{
+    height: 100px;
+    width: 100px;
+    border: 1px solid blue;
+    border-radius: 50%;
+}
+
+.ballMove{
+    position: relative;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    animation: myfirst 10s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
