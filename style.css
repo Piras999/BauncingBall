@@ -1,34 +1,86 @@
 @keyframes myfirst {
     0%   {background: red; top: 0; height: 100px; width: 100px;}
-    11%  {background: blue; top: 500px;  height: 100px; width: 100px;}
-    12%  {background: blue; top: 504px;  height: 96px; width: 106px;}
-    32%   {background: red; top: 100px; height: 100px; width: 100px;}
-    34%   {background: red; top: 95px; height: 102px; width: 98px;}
-    40%   {background: red; top: 200px; height: 100px; width: 100px;}
-    52%  {background: blue; top: 500px;  height: 100px; width: 100px;}
-    53%  {background: blue; top: 502px;  height: 98px; width: 103px;}
-    65%   {background: red; top: 350px; height: 100px; width: 100px;}
-    67%   {background: red; top: 348px; height: 100px; width: 100px;}
-    78%  {background: blue; top: 500px;  height: 100px; width: 100px;}
-    90%  {background: blue; top: 490px;  height: 98px; width: 102px;}
-    92%  {background: blue; top: 490px;  height: 98px; width: 102px;}
-    100%  {background: blue; top: 500px;  height: 100px; width: 100px;}
+    18%  {background: blue; top: 504px;  height: 96px; width: 106px; animation-timing-function: ease-out}
+    35%   {background: red; top: 150px; height: 100px; width: 100px; animation-timing-function: ease-in}
+    53%  {background: blue; top: 502px;  height: 98px; width: 101px; animation-timing-function: ease-out}
+    66%   {background: red; top: 400px; height: 100px; width: 100px; animation-timing-function: ease-in}
+    86%  {background: blue; top: 502px;  height: 98px; width: 100px; animation-timing-function: ease-out}
+    93%   {background: red; top: 480px; height: 100px; width: 100px; animation-timing-function: ease-in}
+    100%  {background: blue; top: 500px;  height: 100px; width: 100px; animation-timing-function: ease}
 }
 
-#containerForBall{
+@keyframes mysecond {
+    0% {background: red; top: 0; animation-timing-function: ease-in}
+    25% {background: blue;}
+    50% {background: green; top: 500px; animation-timing-function: ease-out}
+    75% {background: yellow;}
+    100% {background: red; top: 0; animation-timing-function: ease-in}
+}
+
+@keyframes mythird {
+    0% {background: red; top: 0; transform: rotate(0deg); animation-timing-function: linear}
+    10% {background: blue;}
+    20% {background: brown;}
+    30% {background: orange;}
+    40% {background: pink;}
+    50% {background: green; top: 500px; transform: rotate(360deg); animation-timing-function: linear}
+    60% {background: red;}
+    70% {background: yellow;}
+    80% {background: purple;}
+    90% {background: blue;}
+    100% {background: red; top: 0; transform: rotate(0deg); animation-timing-function: linear}
+}
+
+#mainContainer{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+#containerForTextAndButton{
+    display: flex;
+    flex-direction: column;
+}
+
+.moveBallButton{
+    margin-top: 50px;
+    border: none;
+    height: 3rem;
+    width: 2rem;
+    border-top-right-radius: 20%;
+    border-bottom-right-radius: 20%;
+    outline-style: none;
+}
+
+#secondContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.containerForBall{
     height: 600px;
-    width: 200px;
-    border: 2px solid red;
+    width: 110px;
+    border: 2px solid;
     border-radius: 10px;
     display: flex;
     justify-content: center;
 }
 
-.ball{
+.ballBlue, .ballRed, .ballGreen{
     height: 100px;
     width: 100px;
-    border: 1px solid blue;
+    background-color: red;
     border-radius: 50%;
+}
+
+.ballYellow{
+    height: 100px;
+    width: 100px;
+    background-color: red;
 }
 
 .ballMove{
@@ -36,7 +88,24 @@
     height: 100px;
     width: 100px;
     border-radius: 50%;
-    animation: myfirst 10s;
+    animation: myfirst 6s;
     animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+.ballMove2{
+    position: relative;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    animation: mysecond 4s infinite;
+    animation-fill-mode: forwards;
+}
+
+.ballMove3{
+    position: relative;
+    height: 100px;
+    width: 100px;
+    animation: mythird 6s infinite;
     animation-fill-mode: forwards;
 }

@@ -7,10 +7,29 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <div id="containerForBall">
-            <div class="ballMove"/>
+        <div id="mainContainer">
+            <div id="containerForTextAndButton">
+                    <button class="moveBallButton" style="background-color: blue"/>
+                    <button class="moveBallButton" style="background-color: red"/>
+                    <button class="moveBallButton" style="background-color: yellow"/>
+                    <button class="moveBallButton" style="background-color: green"/>
+            </div>
+
+            <div id="secondContainer">
+                <div class="containerForBall" style="border-color: blue">
+                       <div class="ballBlue"></div> 
+                </div>
+                <div class="containerForBall" style="border-color: red">
+                        <div class="ballRed"></div> 
+                </div>
+                <div class="containerForBall" style="border-color: yellow">
+                        <div class="ballYellow"></div> 
+                </div>
+                <div class="containerForBall" style="border-color: green">
+                        <div class="ballGreen"></div> 
+                </div>
+            </div>
         </div>
-        
         <script src="./app.js"></script>
     </body>
 </html>
