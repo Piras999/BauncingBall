@@ -1,0 +1,21 @@
+#containerForTextAndButton{
+    display: flex;
+    flex-direction: column;
+    width: 4rem;
+}
+
+.moveBallButton{
+    margin-top: 50px;
+    border: none;
+    height: 3rem;
+    width: 4rem;
+    margin-left: -2rem;
+    border-top-right-radius: 20%;
+    border-bottom-right-radius: 20%;
+    outline-style: none;
+}
+
+.moveBallButton:hover{
+    margin-left: -1rem;
+    box-shadow: 0 0 2rem 0.5rem rgba(0,0,0,0.5);
+}

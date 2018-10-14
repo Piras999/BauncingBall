@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function(){
             }else if(this.style.backgroundColor === "yellow"){
                 ballYellow.classList.toggle("ballMove3");
             }else if(this.style.backgroundColor === "green"){
-                ballGreen.classList.toggle("ballMove");
+                ballGreen.classList.toggle("ballMove4");
             }
         })
     }
